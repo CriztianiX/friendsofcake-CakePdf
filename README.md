@@ -110,7 +110,7 @@ Configure::write('CakePdf', [
 ```
 
 ```php
-use CakePdf\View\Pdfiew;
+use CakePdf\View\PdfView;
 
 class InvoicesController extends AppController
 {
@@ -138,7 +138,9 @@ class InvoicesController extends AppController
      */
     public function viewClasses(): array
     {
-        return $this->viewClasses[] = Pdfiew::class;
+        $this->viewClasses[] = PdfView::class;
+
+        return $this->viewClasses;
     }
 }
 ```
